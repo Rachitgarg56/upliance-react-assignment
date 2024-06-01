@@ -1,6 +1,7 @@
 import React from 'react';
 import { incrementCount, decrementCount, resetCount } from '../redux/slices/CounterSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { Button, Stack } from '@mui/material';
 
 const Counter = () => {
   const count = useSelector(state => state.counter.count);
@@ -20,12 +21,13 @@ const Counter = () => {
   }
 
   return (
-    // <div style={{ position: 'relative', textAlign: 'center', paddingTop: '20%' }}>
-    <div className='relative'> 
-        <h1>Counter: {count}</h1>
-        <button onClick={handleIncreaseCount}>Increment</button>
-        <button onClick={handleDecreaseCount}>Decrement</button>
-        <button onClick={handleResetCount}>Reset</button>
+    <div className=' bg-blue-100 relative flex flex-col w-fit h-52 items-center justify-center gap-4 p-6 gap'> 
+        <h1 className='text-3xl'>Background Level: {count}</h1>
+        <Stack direction="row" spacing={2}>
+          <Button onClick={handleIncreaseCount} variant="contained" color="secondary">Increase</Button>
+          <Button onClick={handleDecreaseCount} variant="contained" color="success">Decrease</Button>
+          <Button onClick={handleResetCount} variant="contained" color="error">Reset</Button>
+      </Stack>
     </div>
   )
 }
