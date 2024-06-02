@@ -16,6 +16,8 @@ code {
     monospace;
 }
 
+/* custom */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,3 +27,8 @@ code {
 #root {
   min-height: 100vh;
 }
+
+/* .jodit-react-container {
+  height: 100% !important;
+  width: 100%;
+} */

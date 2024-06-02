@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import { UserButton, useUser } from '@clerk/clerk-react';
+import { UserButton } from '@clerk/clerk-react';
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const { user } = useUser();
-  const userId = user.id; 
-  const email = user.primaryEmailAddress.emailAddress;
-  // console.log(userId,email);
+  // const { user } = useUser();
+  // const userId = user.id; 
+  // const email = user.primaryEmailAddress.emailAddress;
+  // // console.log(userId,email);
 
-  // console.log(user);
+  // // console.log(user);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -28,7 +28,9 @@ const Navbar = () => {
         <AppBar position="static">
             <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                DASHBOARD
+              <Link to={'/'}>
+                  DASHBOARD
+              </Link>
             </Typography>
             <IconButton
                 edge="start"

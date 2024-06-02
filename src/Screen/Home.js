@@ -5,10 +5,12 @@ import TextEditor from '../Components/TextEditor'
 
 const Home = () => {
   return (
-    <div className='relative h-full w-full'>
+    <div className='h-full w-full p-4'>
       <Background/>
-      <Counter/>
-      <TextEditor/>
+      <div className='flex h-1/3 gap-4 justify-between'>
+        <Counter/>
+        <TextEditor/>
+      </div>
     </div>
   )
 }

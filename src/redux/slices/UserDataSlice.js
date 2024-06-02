@@ -1,8 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// const savedCount = localStorage.getItem('count');
-// const count = savedCount !== null ? JSON.parse(savedCount) : 0;
-
 const initialState = {
     name: '',
     email: '',

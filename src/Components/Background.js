@@ -21,16 +21,18 @@ const Background = () => {
     });
 
     return (
-        <div className="h-full w-full absolute overflow-hidden">
-        <animated.div
-            style={{
-            position: 'absolute',
-            bottom: 0,
-            width: '100%',
-            ...springProps,
-            background: 'green',
-            }}
-        />
+        <div className="h-full -z-50 w-full absolute left-0 bottom-0 overflow-hidden">
+      
+            <animated.div
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    width: '100%',
+                    ...springProps,
+                    background: 'linear-gradient(#5FC7F4, #069ADA)',
+                }}
+            />
+
         </div>
   );
 };
