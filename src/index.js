@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
+import { ClerkProvider } from '@clerk/clerk-react'
+
+const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ClerkProvider>
   
   // {/* </React.StrictMode> */}
 );

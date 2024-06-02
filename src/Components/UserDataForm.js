@@ -1,11 +1,15 @@
+import { useUser } from "@clerk/clerk-react";
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 export default function UserDataForm() {
 
+    const { user } = useUser();
+    const userId = user.id; 
+    
     const [formUpdated, setFormUpdated] = useState(false);
-    // const history = useHistory();
+    const [isPreviousUser, setIsPreviousUser] = useState(false);
 
     const nameRef = useRef(null);
     const emailRef = useRef(null);
@@ -24,7 +28,7 @@ export default function UserDataForm() {
             return;
         }
 
-        const userDataObj = { name: name, email: email, phone: phone, address: address, userID: uuidv4() };
+        const userDataObj = { name: name, email: email, phone: phone, address: address, userID: userId ? userId : uuidv4() };
         
         const usersData = JSON.parse(localStorage.getItem('usersData'));
         if (usersData === null) {
@@ -54,8 +58,15 @@ export default function UserDataForm() {
         }
     
     }, [formUpdated])
-   
 
+    useEffect(() => {
+        const usersData = JSON.parse(localStorage.getItem('usersData'));
+        if (usersData !== null) {
+            const oldUser = usersData.some(obj => obj.userID === userId);
+            if (oldUser) setIsPreviousUser(true);
+        }
+    }, [])
+   
     return (
         <div className='w-full h-full flex justify-center items-center'>
             <Container component="main" maxWidth="xs">
@@ -63,6 +74,7 @@ export default function UserDataForm() {
                     <Typography component="h1" variant="h5">FORM</Typography>
                     <Box component="form" sx={{ mt: 3 }}>
                     <TextField 
+                        value={isPreviousUser && isPreviousUser}
                         ref={nameRef}
                         margin="normal"
                         required
@@ -125,4 +137,5 @@ export default function UserDataForm() {
             </Container>
         </div>
     );
+
 }

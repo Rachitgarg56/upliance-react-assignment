@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import { UserButton, useUser } from '@clerk/clerk-react';
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+
+  const { user } = useUser();
+  const userId = user.id; 
+  const email = user.primaryEmailAddress.emailAddress;
+  // console.log(userId,email);
+
+  // console.log(user);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -30,6 +38,7 @@ const Navbar = () => {
                 >
                 <MenuIcon />
             </IconButton>
+            <UserButton />
             <Menu
                 anchorEl={anchorEl}
                 anchorOrigin={{

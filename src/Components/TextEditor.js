@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import JoditEditor from 'jodit-react';
 
-const TextEditor = ({ value, onChange }) => {
+const TextEditor = () => {
   const editor = useRef(null);
 
   const config = {
@@ -9,17 +9,14 @@ const TextEditor = ({ value, onChange }) => {
     toolbarButtonSize: 'large',
     height: 400,
     buttons: [
-      'bold', 'italic', 'underline', 'ul', 'ol'
+      'bold', 'italic', 'underline', 'ul', 'ol','source'
     ]
   };
 
   return (
     <JoditEditor
       ref={editor}
-      value={value}
       config={config}
-    //   onBlur={newContent => onChange(newContent)} // preferred to use only this option to update the content for performance reasons
-      onChange={newContent => {}}
     />
   );
 };
