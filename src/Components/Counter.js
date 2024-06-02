@@ -21,9 +21,9 @@ const Counter = () => {
   }
 
   return (
-    <div className=' bg-blue-100 relative flex flex-col w-[40%] h-auto items-center justify-center gap-4 p-6 gap'> 
-        <h1 className='text-3xl'>Background Level: {count}%</h1>
-        <Stack direction="row" spacing={2}>
+    <div className='bg-blue-100 relative flex flex-col w-full md:w-[40%] h-auto items-center justify-center gap-4 p-6 gap'> 
+        <h1 className='text-2xl sm:text-3xl text-center'>Background Level: {count}%</h1>
+        <Stack direction="row" spacing={2} className='flex flex-wrap gap-4 items-center justify-center'>
           <Button onClick={handleIncreaseCount} variant="contained" color="secondary">Increase</Button>
           <Button onClick={handleDecreaseCount} variant="contained" color="success">Decrease</Button>
           <Button onClick={handleResetCount} variant="contained" color="error">Reset</Button>

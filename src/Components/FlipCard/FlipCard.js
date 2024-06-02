@@ -14,8 +14,8 @@ const FlipCard = ({ frontContent, backContent }) => {
         className={`card ${isFlipped ? 'is-flipped' : ''}`}
         onClick={handleCardClick}
       >
-        <div className="card__face card__face--front text-center">{frontContent}</div>
-        <div className="card__face card__face--back">{backContent}</div>
+        <div className="card__face card__face--front text-center p-2">{frontContent}</div>
+        <div className="card__face card__face--back text-center">{backContent}</div>
       </div>
     </div>
   );

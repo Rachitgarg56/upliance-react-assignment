@@ -24,11 +24,6 @@ code {
   box-sizing: border-box;
 }
 
-#root {
+#root, #app, main {
   min-height: 100vh;
 }
-
-/* .jodit-react-container {
-  height: 100% !important;
-  width: 100%;
-} */

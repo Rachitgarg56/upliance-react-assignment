@@ -4,7 +4,7 @@ import { RedirectToSignIn, SignInButton, SignedIn, SignedOut, UserButton } from 
 
 function App() { 
   return (
-    <div id="app" className="h-screen">
+    <div id="app w-full">
       <SignedOut>
         <RedirectToSignIn/>
       </SignedOut>

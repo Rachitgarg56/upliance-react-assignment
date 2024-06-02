@@ -38,3 +38,10 @@
     transform: rotateY(180deg);
   }
   
+@media screen and (max-width: 455px) {
+  .scene {
+    width: 160px;
+    height: 220px;
+    perspective: 1000px;
+  }
+}

@@ -38,7 +38,7 @@ const Navbar = () => {
                 aria-label="menu"
                 onClick={handleMenuOpen}
                 >
-                <MenuIcon />
+                <MenuIcon className='mx-4' />
             </IconButton>
             <UserButton />
             <Menu
