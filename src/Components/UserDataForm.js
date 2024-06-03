@@ -102,7 +102,7 @@ export default function UserDataForm() {
                         autoComplete="name"
                         autoFocus
                         onChange={(e) => {
-                            setFormUpdated(true)
+                            setFormUpdated(true) 
                             dispatch(setName(e.target.value))
                         }}
                     />
