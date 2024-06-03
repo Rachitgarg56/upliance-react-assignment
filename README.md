@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# React Project Assignment Summary
+## Hosted Link: https://upliance-react-assignment.vercel.app/
+## Overview
+This project is a React-based web application built to fulfill a set of functional requirements. It includes components such as a counter, user data form, rich text editors, and a dashboard with user profile visuals. The project utilizes Material UI, React Spring, and React Router for UI design and navigation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Functional Requirements
+1. **CounterComponent**
+   - Create buttons for increment, decrement, and reset.
+   - Maintain count across re-renders.
+   - Implement background color animation with a linear increase, preferably using a bezier curve.
+   - Reset the background color level to 0 on reset.
 
-## Available Scripts
+2. **UserDataForm**
+   - Design a form for user data including fields for name, address, email, and phone number.
+   - Autogenerate a unique user ID.
+   - Save user data to local storage or RTK on form submission.
+   - Show unsaved changes pop-up if there are unsaved changes when the user tries to close the browser.
 
-In the project directory, you can run:
+3. **RichTextEditors**
+   - Visualize user data in rich text editor format.
+   - Integrate editors with formatting options such as bold, italic, underline, and lists.
+   - Implement data persistence for the rich text content.
 
-### `npm start`
+4. **Additional Features (Optional)**
+   - User authentication with Google sign-in, including safe private routes.
+   - Implement sign-in and sign-up functionality.
+   - Dashboard visualization with user profile visuals.
+   - Display user profile trends using hover flip cards.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
+- React
+- Material UI
+- React Spring
+- React Router
+- Clerk (for authentication)
+- Jodit Editor (for rich text editing)
+- Redux Toolkit (for state management)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Learning from the Project
+Throughout the project, I gained valuable experience in working with React, including the use of hooks and functional components. I also learned about integrating third-party libraries for authentication and rich text editing, as well as state management with Redux Toolkit. Additionally, I improved my skills in UI design, animation, and responsive web development.
 
-### `npm test`
+## Future Improvements
+- Enhance the profile trends section and add more useful user insights.
+- Different user experience for first time users.
+- Make the UI more attractive.
+- Optimize performance and responsiveness for better user experience across devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots of different sections
+![first](https://github.com/Rachitgarg56/upliance-react-assignment/assets/112542259/bb609a1a-3563-4c34-935d-7748ac1f9ef5)
+![second](https://github.com/Rachitgarg56/upliance-react-assignment/assets/112542259/c4a3a5f4-e6f7-443d-b0e0-2ef78a1d8faa)
+![third](https://github.com/Rachitgarg56/upliance-react-assignment/assets/112542259/07458c0d-cb0b-45a1-8416-95e2851a92f3)
+![fourth](https://github.com/Rachitgarg56/upliance-react-assignment/assets/112542259/4cc134fa-4ce7-42ff-af72-627097a28767)
