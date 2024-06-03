@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Background from '../Components/Background'
 import Counter from '../Components/Counter'
 import TextEditor from '../Components/TextEditor'
 import ProfileTrends from '../Components/ProfileTrends'
+import { useUser } from '@clerk/clerk-react'
 
 const Home = () => {
 
-  // // console.log('createdAt', createdAt.toLocaleString());
-  // // console.log('expireAt', expireAt.toLocaleString());
-  // // console.log(`Welcome back. You have been here
-  // //             ${sessions.length} times before.`);
-  // // console.log(`This session has been active
-  // //             since ${session.lastActiveAt.toLocaleString()}`);
-  // //             console.log(session);
-  // const [profileTrends, setProfileTrends] = useState([]);
+  const { user } = useUser();
+  const userId = user.id; 
+
+  useEffect(() => {
+    const usersData = JSON.parse(localStorage.getItem('usersData'));
+    console.log(usersData);
+    if (usersData !== null) {
+      const notFirstTimeUser = usersData.some(obj => obj.userID === userId);
+      console.log(notFirstTimeUser);
+      if (!notFirstTimeUser) {
+        alert('Fill the user form, click on the menu icon in navbar');
+      }
+    } else {
+      alert('Fill the user form, click on the menu icon in navbar');
+    }
+  },[])
 
   return (
     <div id='home' className='h-full w-full p-4'>
