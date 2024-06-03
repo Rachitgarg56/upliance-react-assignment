@@ -23,7 +23,7 @@ const Home = () => {
         <TextEditor/>
       </div>
 
-      <h3 className='trends-heading my-8 text-2xl font-bold'>Click Profile Trend Cards:</h3>
+      <h3 className="trends-heading my-8 text-2xl font-bold text-center text-indigo-600 shadow-sm">Hover Profile Trend Cards:</h3>
 
       <ProfileTrends/>
 
